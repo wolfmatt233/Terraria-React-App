@@ -1,11 +1,11 @@
 import './App.css';
+import NPCDisplay from './components/NPCDisplay';
 
-function App() {
+export default function App() {
   return (
     <div>
       <h1>Project 2 Placeholder</h1>
+      <NPCDisplay/>
     </div>
   );
 }
-
-export default App;
