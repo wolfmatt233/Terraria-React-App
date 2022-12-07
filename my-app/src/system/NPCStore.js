@@ -8,34 +8,20 @@ let NPCStore = {
             spawnRequirement:"Always already present when starting a new world.",
             preferences: {
                 loves:{
-                    biomes: [],
-                    neighbors: []
+                    biomes: ["None"],
+                    neighbors: ["None"]
                 },
                 likes:{
-                    biomes: [
-                        "Forest"
-                    ],
-                    neighbors: [
-                        "Princess",
-                        "Clothier",
-                        "Zoologist"
-                    ]
+                    biomes: [ "Forest" ],
+                    neighbors: [ "Princess", "Clothier", "Zoologist" ]
                 },
                 dislikes:{
-                    biomes:[
-                        "Ocean"
-                    ],
-                    neighbors:[
-                        "Steampunker"
-                    ]
+                    biomes:[ "Ocean" ],
+                    neighbors:[ "Steampunker" ]
                 },
                 hates:{
-                    biomes:[
-                        
-                    ],
-                    neighbors:[
-                        "Painter"
-                    ]
+                    biomes:["None"],
+                    neighbors:[ "Painter" ]
                 }
             }
         },
@@ -72,19 +58,19 @@ let NPCStore = {
             spawnRequirement:"A player has more than 100 health and the Merchant is present.",
             preferences: {
                 loves: {
-                    biomes:[],
+                    biomes:["None"],
                     neighbors:["Arms Dealer"]
                 },
                 likes:{
                     biomes: ["The Hallow"],
-                    neighbors: ["Princess", "Wizards"]
+                    neighbors: ["Princess", "Wizard"]
                 },
                 dislikes:{
                     biomes:["Snow Biome"],
                     neighbors:["Party Girl", "Dryad"]
                 },
                 hates:{
-                    biomes:[],
+                    biomes:["None"],
                     neighbors:["Zoologist"]
                 }
             }
@@ -97,20 +83,20 @@ let NPCStore = {
             spawnRequirement:"A player has an explosive in their inventory and the Merchant is present. Replaces the Guide as the starting NPC when starting a new \"For the Worthy\" world.",
             preferences: {
                 loves: {
-                    biomes:[],
+                    biomes:["None"],
                     neighbors:["Tavernkeep"]
                 },
                 likes:{
-                    biomes: ["Underground",],
-                    neighbors: []
+                    biomes: ["Underground","Cavern","The Underworld"],
+                    neighbors: ["None"]
                 },
                 dislikes:{
-                    biomes:[],
-                    neighbors:[]
+                    biomes:["Ocean"],
+                    neighbors:["Gobline Tinkerer", "Arms Dealer"]
                 },
                 hates:{
-                    biomes:[],
-                    neighbors:[]
+                    biomes:["None"],
+                    neighbors:["None"]
                 }
             }
         },
@@ -122,20 +108,20 @@ let NPCStore = {
             spawnRequirement:"A player has a dye item or any item used to craft dye in their inventory, in addition to certain other conditions.",
             preferences: {
                 loves: {
-                    biomes:[],
-                    neighbors:[]
+                    biomes:["None"],
+                    neighbors:["None"]
                 },
                 likes:{
-                    biomes: [],
-                    neighbors: []
+                    biomes: ["Desert"],
+                    neighbors: ["Princess", "Arms Dealer", "Painter"]
                 },
                 dislikes:{
-                    biomes:[],
-                    neighbors:[]
+                    biomes:["Forest"],
+                    neighbors:["Steampunker"]
                 },
                 hates:{
-                    biomes:[],
-                    neighbors:[]
+                    biomes:["None"],
+                    neighbors:["Pirate"]
                 }
             }
         },
@@ -163,58 +149,6 @@ let NPCStore = {
                     neighbors:[]
                 }
             }
-        },
-    ],
-    biomeList: [
-        {
-            id:0,
-            name:"Forest",
-            img:"Forest.png"
-        },
-        {
-            id:1,
-            name:"Snow Biome",
-            img:"SnowBiome.png"
-        },
-        {
-            id:2,
-            name:"Desert",
-            img:"Desert.png"
-        },
-        {
-            id:3,
-            name:"Jungle",
-            img:"Jungle.png" 
-        },
-        {
-            id:4,
-            name:"Ocean",
-            img:"Ocean.png"
-        },
-        {
-            id:5,
-            name:"Glowing Mushroom Biome",
-            img:"GlowingMushroom.png"
-        },
-        {
-            id:6,
-            name:"Underground",
-            img:"Underground.png"
-        },
-        {
-            id:7,
-            name:"Cavern.png",
-            img:"Cavern.png"
-        },
-        {
-            id:8,
-            name:"The Underworld",
-            img:"Underworld.png"
-        },
-        {
-            id:9,
-            name:"The Hallow",
-            img:"Hallow.png"
         },
     ],
     subscribers: [], //array that holds callbacks
