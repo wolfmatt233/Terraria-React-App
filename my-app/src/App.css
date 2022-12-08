@@ -8,6 +8,35 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: Terraria-Font;
 }
 
+.NPCBox {
+  background-image: url('../public/images/grass.png');
+  background-repeat: no-repeat;
+  background-position-y: -5px;
+}
+
+@keyframes bounce {
+  0% { margin-bottom: 0px; }
+  50% { margin-bottom: 10px; }
+  100% { margin-bottom: 0px; }
+}
+
+.bounceIcon:hover {
+  animation: bounce;
+  animation-duration: 0.4s;
+}
+
+.dropDownTypes {
+  position: absolute;
+  margin-top: 18px;
+  font-size: 18px;
+  margin-left: 20px;
+  color: #666666;
+}
+
+* {
+  font-family: 'Terraria-Font';
+}

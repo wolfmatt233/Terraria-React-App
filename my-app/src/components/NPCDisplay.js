@@ -4,6 +4,7 @@ import { NPCStore } from "../system/NPCStore"
 import { Grid, Modal } from '@mui/material';
 import NPCBox from "./NPCBox";
 import PreferenceBox from "./PreferenceBox";
+import EditBox from "./EditBox"
 
 export default function NPCDisplay() {
     //npc list from data store
@@ -12,33 +13,49 @@ export default function NPCDisplay() {
     //get selected npc data
     const[selectedNPC, setSelectedNPC] = useState({})
 
-    //sets whether the modal is open or not, default closed
-    const [showNPCModal, setNPCModalOpen] = useState(false)
+    //sets whether the preference modal is open or not, default closed
+    const[showNPCModal, setNPCModalOpen] = useState(false)
 
+    //sets whether the edit modal is open
+    const[showEditModal, setEditModalOpen] = useState(false)
+    
     //pre-render: loop through npc list, create an item for each npc
     let npcLoop = npcData.map((npc, ind) => (
-        <NPCBox key={ npc.id } npc={ npc } ind={ ind } showInfo={showInfo} />
+        <NPCBox key={ npc.id } npc={ npc } ind={ ind } gatherInfo={gatherInfo} editInfo={editInfo} />
     ))
 
     return(
-        //return a modal for the preference data
-        //return a list of npcs and their basic data
         <div>
+            {/* Modal used to view NPC Preferences */}
             <Modal open={showNPCModal} onClose={() => { setNPCModalOpen(false) }}>
-                <PreferenceBox key={selectedNPC.id} npc={selectedNPC} preferences={selectedNPC.preferences}/>
+                <div><PreferenceBox npc={selectedNPC}/></div>
             </Modal>
 
+            {/* Modal used to edit an NPC */}
+            <Modal open={showEditModal} onClose={() => { setEditModalOpen(false) }}>
+                <div><EditBox npc={selectedNPC}/></div>
+            </Modal>
+
+            {/* Grid of NPC's and their information */}
             <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{padding:'30px', position:'relative'}}>
                 { npcLoop }
             </Grid>
         </div>
     )
 
-    function showInfo(id) {
+    function gatherInfo(id) {
         //set the current selected npc used for the preference box
         setSelectedNPC(NPCStore.npcList[id])
         
         //open the preference box modal
         setNPCModalOpen(true)
+    }
+
+    function editInfo(id) {
+        //get selected npc to be edited
+        setSelectedNPC(NPCStore.npcList[id])
+
+        //open the edit modal
+        setEditModalOpen(true)
     }
 }

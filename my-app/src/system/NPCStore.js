@@ -8,8 +8,8 @@ let NPCStore = {
             spawnRequirement:"Always already present when starting a new world.",
             preferences: {
                 loves:{
-                    biomes: ["None"],
-                    neighbors: ["None"]
+                    biomes: [],
+                    neighbors: []
                 },
                 likes:{
                     biomes: [ "Forest" ],
@@ -20,7 +20,7 @@ let NPCStore = {
                     neighbors:[ "Steampunker" ]
                 },
                 hates:{
-                    biomes:["None"],
+                    biomes:[],
                     neighbors:[ "Painter" ]
                 }
             }
@@ -87,7 +87,7 @@ let NPCStore = {
                     neighbors:["Tavernkeep"]
                 },
                 likes:{
-                    biomes: ["Underground","Cavern","The Underworld"],
+                    biomes: ["Underground","Caverns","The Underworld"],
                     neighbors: ["None"]
                 },
                 dislikes:{
@@ -108,8 +108,8 @@ let NPCStore = {
             spawnRequirement:"A player has a dye item or any item used to craft dye in their inventory, in addition to certain other conditions.",
             preferences: {
                 loves: {
-                    biomes:["None"],
-                    neighbors:["None"]
+                    biomes:[],
+                    neighbors:[]
                 },
                 likes:{
                     biomes: ["Desert"],
@@ -120,7 +120,7 @@ let NPCStore = {
                     neighbors:["Steampunker"]
                 },
                 hates:{
-                    biomes:["None"],
+                    biomes:[],
                     neighbors:["Pirate"]
                 }
             }
@@ -137,16 +137,16 @@ let NPCStore = {
                     neighbors:[]
                 },
                 likes:{
-                    biomes: [],
-                    neighbors: []
+                    biomes: ["Ocean"],
+                    neighbors: ["Princess", "Party Girl", "Demolitionist", "Tax Collector"]
                 },
                 dislikes:{
-                    biomes:[],
+                    biomes:["Desert"],
                     neighbors:[]
                 },
                 hates:{
                     biomes:[],
-                    neighbors:[]
+                    neighbors:["Tavernkeep"]
                 }
             }
         },
@@ -160,6 +160,9 @@ let NPCStore = {
             callback();
         });
     },
+    editNPC: function(editCommand) {
+        
+    }
 }
 
 export { NPCStore }
