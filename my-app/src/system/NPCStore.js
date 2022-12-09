@@ -92,7 +92,7 @@ let NPCStore = {
                 },
                 dislikes:{
                     biomes:["Ocean"],
-                    neighbors:["Gobline Tinkerer", "Arms Dealer"]
+                    neighbors:["Goblin Tinkerer", "Arms Dealer"]
                 },
                 hates:{
                     biomes:["None"],
@@ -165,4 +165,11 @@ let NPCStore = {
     }
 }
 
-export { NPCStore }
+function editCommand(id, name, desc, spawnReq) {
+    //set each property from the
+    NPCStore.npcList[id].name = name
+    NPCStore.npcList[id].description = desc
+    NPCStore.npcList[id].spawnRequirement = spawnReq
+}
+
+export { NPCStore, editCommand }

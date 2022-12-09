@@ -25,6 +25,7 @@ export default function PreferenceBox(props) {
     }
 
     const PrefItem = styled(Paper)(() => ({
+        backgroundColor:'#17b34e',
         padding:'10px', 
         display:'flex', 
         alignItems: 'center', 
@@ -51,9 +52,12 @@ export default function PreferenceBox(props) {
                     top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
+                    backgroundColor:'#60adfb'
                 }
             }>
-                <h2>{props.npc.name} Preferences</h2>
+                <Box sx={{color:'#fcc425', letterSpacing: '1px'}}>
+                    <h2>{props.npc.name} Preferences</h2>
+                </Box>
                 <Box 
                     component="form"
                     noValidate
@@ -81,13 +85,37 @@ export default function PreferenceBox(props) {
                     </TextField>
                 </Box>
 
-                <Paper sx={{display: notDisplayed, padding:'10px', margin:'20px 0'}}>
+                <Box sx={{display: notDisplayed}}>
+                    <img src="/images/grass.png" alt="grass-img" className='grass-img-prefs' />
+                </Box>
+                <Paper sx={
+                    {
+                        display: notDisplayed, 
+                        padding:'10px', margin:'20px 0', 
+                        backgroundColor:'#583e31',
+                        color: '#e5e8e6',
+                        borderRadius:'0 0 5px 5px',
+                        maxWidth:'96%',
+                    }
+                }>
                     <h3>Biomes</h3>
                     <Box sx={{display:'flex'}}>
                         {selectedPref[0]}
                     </Box>
                 </Paper>
-                <Paper sx={{display: notDisplayed, padding:'10px', margin:'20px 0'}}>
+
+                <Box sx={{display: notDisplayed}}>
+                    <img src="/images/grass.png" alt="grass-img" className='grass-img-prefs' />
+                </Box>
+                <Paper sx={
+                    {
+                        display: notDisplayed, 
+                        padding:'10px', margin:'20px 0', 
+                        backgroundColor:'#583e31',
+                        color: '#e5e8e6',
+                        borderRadius:'0 0 5px 5px'
+                    }
+                }>
                     <h3>Neighbors</h3>
                     <Box sx={{display:'flex'}}>
                         {selectedPref[1]}

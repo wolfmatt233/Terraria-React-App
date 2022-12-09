@@ -5,6 +5,7 @@ import { Grid, Modal } from '@mui/material';
 import NPCBox from "./NPCBox";
 import PreferenceBox from "./PreferenceBox";
 import EditBox from "./EditBox"
+import "./components.css"
 
 export default function NPCDisplay() {
     //npc list from data store
@@ -33,11 +34,11 @@ export default function NPCDisplay() {
 
             {/* Modal used to edit an NPC */}
             <Modal open={showEditModal} onClose={() => { setEditModalOpen(false) }}>
-                <div><EditBox npc={selectedNPC}/></div>
+                <div><EditBox npc={selectedNPC} setEditModalOpen={setEditModalOpen}/></div>
             </Modal>
 
             {/* Grid of NPC's and their information */}
-            <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{padding:'30px', position:'relative'}}>
+            <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 2 }} className='NPCDisplay'>
                 { npcLoop }
             </Grid>
         </div>

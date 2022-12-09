@@ -1,0 +1,92 @@
+/* Animations */
+@keyframes bounce {
+    0% { margin-bottom: 0px; }
+    50% { margin-bottom: 15px; }
+    100% { margin-bottom: 0px; }
+}
+
+@keyframes introCards {
+    /* 0% { opacity: 0; }
+    100% { opacity: 1; } */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* NPCDisplay.js */
+.NPCDisplay {
+    padding: 30px;
+    position: relative; 
+    overflow: hidden;
+}
+
+
+
+/* NPCBox.js */
+.grid-item {
+    width: 20%;
+    min-width: 250px;
+    animation-name: introCards;
+    animation-duration: 2s;
+}
+
+.grass-img {
+    width: 100%;
+    margin-bottom: -5px;
+    
+}
+
+.NPCBox {
+    height: 100%;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.boxHeader {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 7px;
+    margin-top: 5px;
+}
+
+.bounceIcon:hover {
+    animation: bounce;
+    animation-duration: 0.4s;
+}
+
+.boxContent {
+    margin-bottom: 100px;
+    line-height: 24px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.buttonContainer {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 45px;
+    width: 93%;
+}
+
+
+
+/* PrefernceBox.js */
+.grass-img-prefs {
+    width: 100%;
+    margin-bottom: -25px;
+}
+
+.dropDownTypes {
+    position: absolute;
+    margin-top: 21px;
+    font-size: 18px;
+    margin-left: 20px;
+    color: #e5e8e6;
+    letter-spacing: 1px;
+}
