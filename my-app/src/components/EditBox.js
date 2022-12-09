@@ -24,7 +24,7 @@ export default function EditBox(props) {
     `
 
     return(
-        <Paper sx={
+        <Paper className='modalIntro' sx={
             {
                 padding: '20px 15px', 
                 width: '500px', 

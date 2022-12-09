@@ -20,7 +20,7 @@ export default function NPCDisplay() {
     //sets whether the edit modal is open
     const[showEditModal, setEditModalOpen] = useState(false)
     
-    //pre-render: loop through npc list, create an item for each npc
+    //loop through npc list, create an item for each npc
     let npcLoop = npcData.map((npc, ind) => (
         <NPCBox key={ npc.id } npc={ npc } ind={ ind } gatherInfo={gatherInfo} editInfo={editInfo} />
     ))

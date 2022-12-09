@@ -1,92 +1,131 @@
 /* Animations */
 @keyframes bounce {
-    0% { margin-bottom: 0px; }
-    50% { margin-bottom: 15px; }
-    100% { margin-bottom: 0px; }
+  0% {
+    margin-bottom: 0px;
+  }
+  50% {
+    margin-bottom: 15px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
 }
 
 @keyframes introCards {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-    /* 0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); } */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 /* NPCDisplay.js */
 .NPCDisplay {
-    padding: 30px;
-    position: relative; 
-    overflow: hidden;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
 }
-
-
 
 /* NPCBox.js */
 .grid-item {
-    width: 20%;
-    min-width: 250px;
-    animation-name: introCards;
-    animation-duration: 2s;
+  width: 20%;
+  min-width: 250px;
+  animation-name: introCards;
+  animation-duration: 2s;
 }
 
 .grass-img {
-    width: 100%;
-    margin-bottom: -5px;
-    
+  width: 100%;
+  margin-bottom: -5px;
 }
 
 .NPCBox {
-    height: 100%;
-    padding: 5px 10px;
-    position: relative;
+  height: 100%;
+  padding: 5px 10px;
+  position: relative;
 }
 
 .boxHeader {
-    display: flex; 
-    align-items: center;
-    justify-content: space-between; 
-    padding: 0 7px;
-    margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px;
+  margin-top: 5px;
+  height: 70px;
+}
+
+/* https://unused-css.com/blog/css-shake-animation/ */
+@keyframes shake {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+.boxHeader:hover {
+  animation: shake .7s;
 }
 
 .bounceIcon:hover {
-    animation: bounce;
-    animation-duration: 0.4s;
+  animation: bounce;
+  animation-duration: 0.4s;
 }
 
 .boxContent {
-    margin-bottom: 100px;
-    line-height: 24px;
-    font-size: 18px;
-    letter-spacing: 1px;
+  margin-bottom: 100px;
+  line-height: 24px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .buttonContainer {
-    position: absolute;
-    bottom: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 45px;
-    width: 93%;
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 45px;
+  width: 93%;
 }
 
-
-
 /* PrefernceBox.js */
+@keyframes modalIntro {
+  0% { left: -50%; top: -50%; }
+  100% { left: 50%; top: 50%;  }
+}
+
+.modalIntro {
+  animation-name: modalIntro;
+  animation-duration: 1s;
+}
+
+@keyframes prefInfoIntro {
+  /* https://unused-css.com/blog/css-shake-animation/ */
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.prefInfoContiner:hover {
+  animation: prefInfoIntro;
+  animation-duration: 1s;
+}
+
 .grass-img-prefs {
-    width: 100%;
-    margin-bottom: -25px;
+  width: 100%;
+  margin-bottom: -25px;
 }
 
 .dropDownTypes {
-    position: absolute;
-    margin-top: 21px;
-    font-size: 18px;
-    margin-left: 20px;
-    color: #e5e8e6;
-    letter-spacing: 1px;
+  position: absolute;
+  margin-top: 21px;
+  font-size: 18px;
+  margin-left: 20px;
+  color: #e5e8e6;
+  letter-spacing: 1px;
 }

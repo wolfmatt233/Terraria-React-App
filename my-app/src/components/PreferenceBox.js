@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Paper, Box, MenuItem, styled, TextField } from '@mui/material';
 import { fontFamily, minHeight } from '@mui/system';
+import "./components.css"
 
 export default function PreferenceBox(props) {
     
@@ -11,6 +12,7 @@ export default function PreferenceBox(props) {
     //set the empty biome and neighbor boxes not to display until an option is chosen
     const[notDisplayed, setDisplayed] = useState("none")
 
+    //used to display preference type in the dropdown bar
     const[prefType, setPrefType] = useState("")
 
     const handleChange = (event) => {
@@ -36,6 +38,8 @@ export default function PreferenceBox(props) {
         height:'45px',
     }))
 
+    //each of these is called when a certain button is clicked 
+    //and gathers the preferences for each type: biome and neighbor (both arrays)
     const loves = [prefLoop("loves.biomes"),  prefLoop("loves.neighbors")]
     const likes = [prefLoop("likes.biomes"), prefLoop("likes.neighbors")]
     const dislikes = [prefLoop("dislikes.biomes"), prefLoop("dislikes.neighbors")]
@@ -44,7 +48,7 @@ export default function PreferenceBox(props) {
     //Modal information to show preference information
     return(
         <div>
-            <Paper sx={
+            <Paper className='modalIntro' sx={
                 {
                     padding: '20px 15px', 
                     width: '500px', 
@@ -70,6 +74,7 @@ export default function PreferenceBox(props) {
                         value={selectedPref}
                         onChange={handleChange}
                     >
+                        {/* pass over an array with the  */}
                         <MenuItem sx={{fontFamily:'Terraria-Font'}}
                             value={[loves, "Loves"]}
                         >Loves</MenuItem>
@@ -85,46 +90,53 @@ export default function PreferenceBox(props) {
                     </TextField>
                 </Box>
 
-                <Box sx={{display: notDisplayed}}>
-                    <img src="/images/grass.png" alt="grass-img" className='grass-img-prefs' />
-                </Box>
-                <Paper sx={
-                    {
-                        display: notDisplayed, 
-                        padding:'10px', margin:'20px 0', 
-                        backgroundColor:'#583e31',
-                        color: '#e5e8e6',
-                        borderRadius:'0 0 5px 5px',
-                        maxWidth:'96%',
-                    }
-                }>
-                    <h3>Biomes</h3>
-                    <Box sx={{display:'flex'}}>
-                        {selectedPref[0]}
+                <div className='prefInfoContiner'>
+                    <Box sx={{display: notDisplayed}}>
+                        <img src="/images/grass.png" alt="grass-img" className='grass-img-prefs' />
                     </Box>
-                </Paper>
+                    <Paper sx={
+                        {
+                            display: notDisplayed, 
+                            padding:'10px', margin:'20px 0', 
+                            backgroundColor:'#583e31',
+                            color: '#e5e8e6',
+                            borderRadius:'0 0 5px 5px',
+                            maxWidth:'96%',
+                        }
+                    }>
+                        <h3>Biomes</h3>
+                        <Box sx={{display:'flex'}}>
+                            {selectedPref[0]}
+                        </Box>
+                    </Paper>
+                </div>
 
-                <Box sx={{display: notDisplayed}}>
-                    <img src="/images/grass.png" alt="grass-img" className='grass-img-prefs' />
-                </Box>
-                <Paper sx={
-                    {
-                        display: notDisplayed, 
-                        padding:'10px', margin:'20px 0', 
-                        backgroundColor:'#583e31',
-                        color: '#e5e8e6',
-                        borderRadius:'0 0 5px 5px'
-                    }
-                }>
-                    <h3>Neighbors</h3>
-                    <Box sx={{display:'flex'}}>
-                        {selectedPref[1]}
+                <div className='prefInfoContiner'>
+                    <Box sx={{display: notDisplayed}}>
+                        <img src="/images/grass.png" alt="grass-img" className='grass-img-prefs' />
                     </Box>
-                </Paper>
+                    <Paper sx={
+                        {
+                            display: notDisplayed, 
+                            padding:'10px', margin:'20px 0', 
+                            backgroundColor:'#583e31',
+                            color: '#e5e8e6',
+                            borderRadius:'0 0 5px 5px'
+                        }
+                    }>
+                        <h3>Neighbors</h3>
+                        <Box sx={{display:'flex'}}>
+                            {selectedPref[1]}
+                        </Box>
+                    </Paper>
+                </div>
             </Paper>
         </div>
     )
 
+
+    //pref loop gets the location via the a string that navigates the JSON 
+    //then searches through an array and displays a card for each result
     function prefLoop(type) {
         //get the location for the array type (either biome or neighbor)
         let prefLocation = "props.npc.preferences." + type
