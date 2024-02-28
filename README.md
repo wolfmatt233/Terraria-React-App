@@ -1,6 +1,6 @@
 # Project 2
 
-Azure Link: https://lively-desert-0516a990f.2.azurestaticapps.net/
+[Azure Link](https://lively-desert-0516a990f.2.azurestaticapps.net/)
 
 # Project Complete
 
