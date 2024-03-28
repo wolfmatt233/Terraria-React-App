@@ -1,8 +1,8 @@
-# Project 2
+# React Terraria Data Display
 
 [Azure Link](https://lively-desert-0516a990f.2.azurestaticapps.net/)
 
-# Project Complete
+# Component Descriptions
 
 - NPC Data Store with list of NPCs and info
 - NPC Display: The central hub where the grid is created along with the modals and states to activate them and pass data to them
