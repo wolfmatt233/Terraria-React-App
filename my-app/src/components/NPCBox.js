@@ -10,6 +10,7 @@ export default function NPCBox(props) {
     font-weight: 600;
     margin-bottom: 5px;
     font-family: Terraria-Font;
+    border: 2px solid transparent;
     &:hover {
       border: 2px solid #17b34e;
     }
