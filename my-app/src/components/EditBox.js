@@ -99,7 +99,3 @@ export default function EditBox(props) {
   );
 }
 
-//gather data from text fields
-//find npc through id
-//insert new data into object
-//
