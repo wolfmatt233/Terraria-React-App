@@ -19,7 +19,7 @@ export default function NPCBox(props) {
       <Grid item className='grid-item'>
 
         {/* Display grass on top of each container */}
-        <img src="/images/grass.png" alt="grass-img" className='grass-img' />
+        <img src={"./images/grass.png"} alt="grass-img" className='grass-img' />
 
         {/* NPC Info Continer */}
         <Paper className='NPCBox' sx={{backgroundColor:'#583e31', borderRadius:'0 0 5px 5px'}}>
@@ -27,7 +27,7 @@ export default function NPCBox(props) {
           {/* Name and Image header */}
           <Paper className='boxHeader' sx={{backgroundColor:'#17b34e', color:'#e5e8e6'}}>
             <h2>{ props.npc.name }</h2>
-            <img className='bounceIcon' src={ "/images/" + props.npc.img } alt={ props.npc.img } />
+            <img className='bounceIcon' src={ "./images/" + props.npc.img } alt={ props.npc.img } />
           </Paper>
 
           {/* Description and Spawn Requirements */}
