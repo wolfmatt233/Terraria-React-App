@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Terraria-React-App/static/css/main.856155eb.css",
+    "main.js": "/Terraria-React-App/static/js/main.f15e5878.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Terraria-React-App/static/js/787.28cb0dcd.chunk.js",
+    "static/media/TerrariaBackground.jpeg": "/Terraria-React-App/static/media/TerrariaBackground.099a51e69c2a070d0592.jpeg",
+    "static/media/ANDYB.TTF": "/Terraria-React-App/static/media/ANDYB.476d3f23e498efffdbe0.TTF",
+    "index.html": "/Terraria-React-App/index.html",
+    "main.856155eb.css.map": "/Terraria-React-App/static/css/main.856155eb.css.map",
+    "main.f15e5878.js.map": "/Terraria-React-App/static/js/main.f15e5878.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Terraria-React-App/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.856155eb.css",
+    "static/js/main.f15e5878.js"
+  ]
+}
