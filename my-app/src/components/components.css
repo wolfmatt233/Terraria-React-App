@@ -57,15 +57,19 @@
 
 /* https://unused-css.com/blog/css-shake-animation/ */
 @keyframes shake {
-  0% { transform: translateX(0) }
-  25% { transform: translateX(5px) }
-  50% { transform: translateX(-5px) }
-  75% { transform: translateX(5px) }
-  100% { transform: translateX(0) }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .boxHeader:hover {
-  animation: shake .7s;
+  animation: shake 0.3s;
 }
 
 .bounceIcon:hover {
@@ -93,27 +97,36 @@
 
 /* PreferenceBox.js */
 @keyframes modalIntro {
-  0% { left: -50%; top: -50%; }
-  100% { left: 50%; top: 50%;  }
+  0% {
+    left: -50%;
+    top: -50%;
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+  }
 }
 
 .modalIntro {
   animation-name: modalIntro;
-  animation-duration: .4s;
+  animation-duration: 0.4s;
 }
 
 @keyframes prefInfoIntro {
-  /* https://unused-css.com/blog/css-shake-animation/ */
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(0eg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .prefInfoContiner:hover {
   animation: prefInfoIntro;
-  animation-duration: 1s;
+  animation-duration: .3s;
 }
 
 .grass-img-prefs {
