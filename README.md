@@ -1,6 +1,6 @@
 # React Terraria Data Display
 
-[Azure Link](https://lively-desert-0516a990f.2.azurestaticapps.net/)
+[Try it here](https://n320-wolfmi.github.io/Terraria-React-App/)
 
 # Component Descriptions
 
