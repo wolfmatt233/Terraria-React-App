@@ -1,6 +1,6 @@
 # React Terraria Data Display
 
-[Try it here](https://n320-wolfmi.github.io/Terraria-React-App/)
+[Try it here](https://wolfmatt233.github.io/Terraria-React-App/)
 
 # Component Descriptions
 
